@@ -96,7 +96,7 @@ Prozess für die Berechnung der Nullstellen (Schnittpunkt des Funktionsgraphen m
 Prozess für die Berechnung der Achsenabschnitte (Schnittpunkt des Funktionsgraphen mit der Y-Achse). Hierzu wird eine Anfrage an das Short Answers API von Wolfram Alpha geschickt.
 
 - Trigonometric Server<br>
-Prozess für die Berechnung trigonometrischer Informationen. Hier wird die Amplitude (halbe Distanz zwischen Maximum und Minimum der Funktion) und die Periode (Abstände zwischen Auftreten der gleichen Funktionswerten) berechnet. Hierzu wird die gelieferte mathematische Funktion ausgewertet um identifizieren zu können, ob es sich um eine trigonometrische Funktion handelt. Anschliessend werden die Komponente der Funktion ausgefiltert, die für die Berechnung der Amplitude bzw. der Periode relevant sind (Beispielmuster: A sin(Bx)).
+Prozess für die Berechnung trigonometrischer Informationen. Hier wird die Amplitude (halbe Distanz zwischen Maximum und Minimum der Funktion) und die Periode (Abstände zwischen Auftreten der gleichen Funktionswerten) berechnet. Hierzu wird die gelieferte mathematische Funktion ausgewertet um identifizieren zu können, ob es sich um eine trigonometrische Funktion handelt. Anschliessend werden die Komponenten der Funktion ausgefiltert, die für die Berechnung der Amplitude bzw. der Periode relevant sind (Beispielmuster: A sin(Bx)).
 
 
 **Wolfram Alpha API**
@@ -139,9 +139,9 @@ Wolfram Alpha wertet die gelieferten mathematischen Ausdrücke aus und sendet da
 
 Das Deployment erfolgt mittels Docker. Hierzu wurden für die beiden Server-Prozesse Webserver und API-Server jeweils separate Docker Images (siehe Dockerfile) und Container (siehe docker-compose.yml) eingerichtet.<br>
 Der Quellcode wird direkt in das entsprechende Image (node.js official) kopiert und anschliessend werden per Kommando `npm install` die Node-Dependencies installiert.<br>
-Für die Intialisierung der Container sind somit nur minimale Angaben nötige. Unter anderem die Freigabe der Netzwerkports, 8080 für den Zugriff auf den Webserver und 8001 für die API-Calls. Die Container werden in das [Bridge-Network](https://docs.docker.com/network/drivers/bridge/) gesetzt sodass die beiden Ports und die IP-Adresse des Host-Systems ein Socket bilden.
+Für die Intialisierung der Container sind somit nur minimale Angaben nötig. Unter Anderem die Freigabe der Netzwerkports 8080 für den Zugriff auf den Webserver und 8001 für die API-Calls. Die Container werden in das [Bridge-Network](https://docs.docker.com/network/drivers/bridge/) gesetzt, sodass die beiden Ports und die IP-Adresse des Host-Systems ein Socket bilden.
 
-Auf der obigen Grafik wird das Deployment sowie die Zugriff auf die Webapplikation über dasselbe Host-System dargestellt (Host & Server identisch). Der Zugriff kann jedoch auch über das Netzwerk von einem Remote-Host ohne weitere Konfigurationen stattfinden.
+Auf der obigen Grafik wird das Deployment sowie der Zugriff auf die Webapplikation über dasselbe Host-System dargestellt (Host & Server identisch). Der Zugriff kann jedoch auch über das Netzwerk von einem Remote-Host ohne weitere Konfigurationen stattfinden.
 
 ## Fazit & Reflexion
 
@@ -149,11 +149,11 @@ Mit dem Abschluss der Entwicklung der Applikation bin ich froh und damit zufried
 Gut finde ich, dass ich die Funktionen auf dem API-Server in verschiedene Serverprozesse unterteilt habe, was zur Folge hat, dass das System und somit auch der Code übersichtlicher gestaltet wird.<br>
 Die gewählte Deployment-Strategie mittels Docker ist sehr flexibel und kann systemunabhängig eingesetzt werden. Auch hat mir dies die Chance ermöglicht, mich mit dieser Technologie ausseinanderzusetzen und mein Wissen zu vertiefen.
 
-Leider konnten die angestrebten optionale Anforderungen nicht umgesetzt werden. Obwohl ich den vorgegebene Zeitaufwand von ca 60h fast erreicht habe, hat es doch nicht ausgereicht um ein Usermanagement (Registrierung/Anmeldung) und die Eingabehistorie (abhängig von Usermanagement) zu implementieren. Ursache liegt hierfür grösstenteils darin, dass ich den Aufwand für die Umsetzung der Grundfunktionalität sehr unterschätzt habe. Mir ist bewusst, dass dies ein zentraler Bestandteil beim Coding ist, jedoch war es während fast jeder Coding Session nötig diverse Informationen (JavaScript/Node/Angular) nachzuschlagen. Hier war das Unterrichtsmaterial sehr hilfreich.
+Leider konnten die angestrebten optionale Anforderungen nicht umgesetzt werden. Obwohl ich den vorgegebenen Zeitaufwand von ca 60h fast erreicht habe, hat es doch nicht ausgereicht um ein Usermanagement (Registrierung/Anmeldung) und die Eingabehistorie (abhängig von Usermanagement) zu implementieren. Ursache liegt hierfür grösstenteils darin, dass ich den Aufwand für die Umsetzung der Grundfunktionalität sehr unterschätzt habe. Mir ist bewusst, dass es ein zentraler Bestandteil beim Coding ist, jedoch war es während fast jeder Coding Session nötig diverse Informationen (JavaScript/Node/Angular) nachzuschlagen. Hier war das Unterrichtsmaterial sehr hilfreich.
 
 Desweiteren ist der Design-Aspect eine, meiner Schwächen. Der Webauftritt der Applikation ist keine Besonderheit. Die CSS-Library Boostrap 5 war hierfür sehr hilfreich, um das Layout und Design bestimmter HTML-Elementen zu gestalten.
 
-Ebenso fehlt noch eine umfangreiche Input-Validierung, um überhaupt auswerten zu können, ob es sich bei Benutzereingaben um mathematischen Funktionen handelt. Beispielsweise bei Eingabe des Stichwortes 'Zurich' wird schlicht eine Karte der Stadt Zürich als Bild angezeigt. Leider ist mir dies erst beim letzten Funktionstest aufgefallen, sodass keine Zeit mehr übrig war um es anzugehen (keine Unit-Tests definiert). Automatisierte Unit/Funkions-Tests muss ich in Zukunft laufend und parallel zur bzw vor der Entwicklung definieren.
+Ebenso fehlt noch eine umfangreiche Input-Validierung, um überhaupt auswerten zu können, ob es sich bei Benutzereingaben um mathematische Funktionen handelt. Beispielsweise bei Eingabe des Stichwortes 'Zurich' wird schlicht eine Karte der Stadt Zürich als Bild ausgegeben. Leider ist mir dies erst beim letzten Funktionstest aufgefallen, sodass keine Zeit mehr übrig war um es anzugehen (keine Unit-Tests definiert). Automatisierte Unit/Funkions-Tests muss ich in Zukunft laufend und parallel zur bzw vor der Entwicklung definieren.
 
 Zukünftig muss unbedingt der Zeitaufwand zur Umsetzung der Anforderungen besser eingeschätzt werden, z.B. mittels Zerlegung in kleinen und detailierten Arbeitsschritten. Somit kann es auch klar werden, ob die Zeiteinschätzung und/oder die Umsetzung bestimmter Anforderungen realistisch ist.
 
