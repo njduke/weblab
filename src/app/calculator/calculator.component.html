@@ -1,0 +1,76 @@
+<div class="container" id="input-container">
+    <form id="input-form" class="container col" [formGroup]="mathForm" (ngSubmit)="onSubmit()">
+        <div class="row justify-content-start align-items-end">
+            <button type="button" id="help-button" class="btn btn-link text-start col-2" (click)="toggleSyntax()">Help</button>
+            <label id="func-input-label" for="func-input" class="form-label text-start col-9">Mathematical function:</label>
+        </div>
+        <div *ngIf="showHelp" id="syntaxHelp" class="row">
+            <span class="text-start col-12">Syntax examples (A,B,C,a,b -> constants or constant result of calculation)</span>
+            <span class="text-start col-12" style="margin-top: 5px; font-weight: bold;">Trigonometrics:</span>
+            <ul class="text-start">
+                <li>Asin(Bx)</li>
+                <li>Acos(Bx)+C</li>
+                <li>Atan(B/Cx)-C</li>
+            </ul>
+            <span class="text-start col-12" style="margin-top: 5px; font-weight: bold;">Polynomials (Power Functions)</span>
+            <ul class="text-start">
+                <li>Ax^a+Bx^b-Cx</li>
+                <li>A/Cx^a+Bx</li>
+            </ul>
+            <span class="text-start col-12" style="margin-top: 5px; font-weight: bold;">Linear Functions</span>
+            <ul class="text-start">
+                <li>Ax-B</li>
+            </ul>
+            <span class="text-start col-12" style="margin-top: 5px; font-weight: bold;">Exponential Functions</span>
+            <ul class="text-start">
+                <li>e^x</li>
+                <li>e^{{'{4x-2}'}}+2/3</li>
+            </ul>
+            <span class="text-start col-12">For best results, use single variable functions and 'x' as independent variable.</span>
+        </div>
+        <div class="row justify-content-center">
+            <input formControlName="mathFunction" class="form-control col" id="func-input" type="text" placeholder="Example: 2x^2 + 4x + 1">
+        </div>
+        <div class="row justify-content-center">
+            <button type="submit" class="btn btn-primary col-4" id="submit-btn">Σubmit</button>
+        </div>
+    </form>
+</div>
+
+<br>
+
+<div *ngIf="isLoading" class="progress" role="progressbar" aria-label="Basic example" [attr.aria-valuenow]="progressValue" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar" [style]="progressPercent"></div>
+  </div>
+
+<div class="container col" *ngIf="isDoneLoading">
+    <div class="row">
+        <div class="col-12">
+            <label class="row-4" for="derivative">Derivative</label>
+            <p class="row-4" id="derivative">{{mathFunctions.derivative}}</p>
+        </div>
+        <div class="col-12">
+            <label class="row-4" for="x-intercept">X-Intercept</label>
+            <p class="row-6" id="x-intercept">{{mathFunctions.xIntercept}}</p>
+        </div>
+        <div class="col-12">
+            <label class="row-4" for="y-intercept">Y-Intercept</label>
+            <p class="row-6" id="y-intercept">{{mathFunctions.yIntercept}}</p>
+        </div>
+    </div>
+    <div class="row" *ngIf="isTrigonometric === true">
+        <div class="col-12">
+            <label class="row-4" for="amplitude">Amplitude</label>
+            <p class="row-6" id="amplitude">{{mathFunctions.amplitude}}</p>
+        </div>
+        <div class="col-12">
+            <label class="row-4" for="periodicy">Periodicy</label>
+            <p class="row-6" id="periodicy">{{mathFunctions.periodicy}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <img id="plot" src={{mathFunctions.plot}} alt="plot">
+        </div>
+    </div>
+</div>

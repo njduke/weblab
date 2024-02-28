@@ -1,0 +1,31 @@
+
+#nav-container {
+    width: 60%;
+}
+
+#navbar-comment {
+    font-size: small;
+}
+
+#navigation {
+    background-color: #1995AD;
+}
+
+#app-body {
+    background-color: #F1F1F2;
+    margin-top: 5%;
+    width: 50%;
+}
+
+#quote {
+    font-size: small;
+    color: black;
+}
+
+.nav-link {
+    color: #9290C3;
+}
+
+.navbar-text {
+    color: #9290C3;
+}

@@ -1,0 +1,47 @@
+
+label {
+    font-weight: bold;
+}
+
+#input-container {
+    width: 50%;
+}
+
+#func-input {
+    background-color: lightseagreen;
+
+}
+
+#input-form {
+    padding-top: 5%;
+}
+
+#func-input::placeholder {
+    opacity: 0.5;
+    color: red;
+}
+
+#func-input::-ms-input-placeholder { /* Edge 12-18 */
+    color: red;
+}
+
+#submit-btn {
+    width: 30%;
+}
+
+#syntaxHelp {
+    font-size: small;
+    font-style: italic;
+}
+
+#func-input-label {
+    padding-left: 3px;
+    margin-bottom: 7px;
+}
+
+#help-button {
+    padding-right: 1px;
+    padding-left: 3px;
+    width: 35px;
+    font-size: medium;
+}
