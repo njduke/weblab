@@ -1,0 +1,39 @@
+Datum; Anzahl Std; Tätigkeit(en)
+
+
+06/02/2024 - 1.5h
+Brainstorming & Erarbeitung eigene Projektidee
+
+08/02/2024 - 1.h (T2.5)
+Recherche Auth0
+
+10/02/2024 - 2.5h (T5h)
+Coding: Erstellung erste Angular Components
+
+17/02/2024 - 3h (T8h)
+Recherche & Erstellung Angular Service für HTTP-Anfragen
+
+20/02/2024 - 3h (T11h)
+Recherche Dokumentation & Refactoring Angular Projektstruktur auf NgModules
+& Coding MathService & Komponente
+
+21/02/2024 - 7h (T18)
+Recherche express.js Routers & Coding Webserver & derivative Server
+
+22/02/2024 - 8h (T26)
+Implementierung x-intercept-server & y-intercept-server & Angular http request, Testing anhand Postman
+
+23/02/2024 - 5h (T31)
+Anpassung & Testing derivative server anhand Postman
+
+24/02/2024 - 9h (T40)
+Implementierung Plot-Server & Trigonometric Server
+
+25/02/2024 - 8h (T48)
+Refactoring & Testing Trigonometric Server
+
+27/02/2024 - 6h (T54)
+Styling, Layout, Debuggin, Systemtest, Entitätseparierung, Container-Deployment
+
+28/02/2024 - 3h (T57)
+Dokumentation & Abgabe
