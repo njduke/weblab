@@ -2,16 +2,16 @@
 
 ## Einführung & Kontext
 
-Das in diesem Dokument erläuterte Softwareentwicklungsprojekt wurde im Rahmen des Moduls WEBLAB an der Hochschule Luzern {link?} durchgeführt. Hierbei wurde das Werkzeug MatFunc entwickelt, das eine bestimmte Anzahl von
-Familien mathematischer Funkionen auswerten und Lösungen relevanter Informationen der entsprechenden Funktion berechnen kann.
+Das in diesem Dokument erläuterte Softwareentwicklungsprojekt wurde im Rahmen des Moduls WEBLAB an der [Hochschule Luzern](https://www.hslu.ch/en/) durchgeführt. Hierbei wurde das Werkzeug MatFunc entwickelt, das eine bestimmte Anzahl von
+Familien mathematischer Funkionen auswerten und Lösungen relevanter Informationen der entsprechenden Funktionen berechnen kann.
 
-Das Werkzeug ist auf keine Zielgruppe beschränkt, sondern für allen Interessenten der Mathematik zugänglich.
+Das Werkzeug ist auf keine Zielgruppe beschränkt, sondern für alle Interessenten der Mathematik zugänglich.
 
 
 ## Ziele
 
 Ziel des Softwareprojekts ist es, eine Eingabeoberfläche bereitzustellen, welche über einen beliebigen Web-Browser zugänglich ist und eine mathematische Funktion als Input erwartet. Die entsprechenden
-fachlichen Anforderungen sind nachfolgend verkürzt aufgelistet (Aufzählungreihenfolge nach MoSCoW-Priorisierung {Link}). Die komplette Anforderungsliste ist unter {} verfügbar.
+fachlichen Anforderungen sind nachfolgend verkürzt aufgelistet (Aufzählungreihenfolge nach [MoSCoW-Priorisierung](https://de.wikipedia.org/wiki/MoSCoW-Priorisierung)). Die komplette Anforderungsliste ist unter  verfügbar.
 
 **User Story 1: Mathematische Funkion eingeben (Prio 'Must')**<br>
 Eingabe akzeptiert folgende mathematische Funktionstypen:
