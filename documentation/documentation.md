@@ -45,6 +45,7 @@ Zur Implementierung des Softwareprojekts wurden Technologien eingesetzt, welche 
 Der angestrebte Technologie-Stack ist somit folgender:
 - Angular (front-end)
 - Node.js (back-end)
+- Bootstrap CSS
 - PostgreSQL (falls User Stories 3, 4, 5)
 - Wolfram Alpha API (externe API-Calls)
 
