@@ -1,0 +1,8 @@
+services:
+  api-server:
+    image: njoaki/api-server:1.0
+    container_name: api-server
+    restart: always
+    network_mode: bridge
+    ports:
+      - 8001:8001
