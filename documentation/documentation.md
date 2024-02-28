@@ -11,7 +11,7 @@ Das Werkzeug ist auf keine Zielgruppe beschränkt, sondern für alle Interessent
 ## Ziele
 
 Ziel des Softwareprojekts ist es, eine Eingabeoberfläche bereitzustellen, welche über einen beliebigen Web-Browser zugänglich ist und eine mathematische Funktion als Input erwartet. Die entsprechenden
-fachlichen Anforderungen sind nachfolgend verkürzt aufgelistet (Aufzählungreihenfolge nach [MoSCoW-Priorisierung](https://de.wikipedia.org/wiki/MoSCoW-Priorisierung)). Die komplette Anforderungsliste ist unter  verfügbar.
+fachlichen Anforderungen sind nachfolgend verkürzt aufgelistet (Aufzählungreihenfolge nach [MoSCoW-Priorisierung](https://de.wikipedia.org/wiki/MoSCoW-Priorisierung)). Die komplette Anforderungsliste ist unter /Aufgabenbeschreibung_Nikos-Joakimidis.pdf verfügbar.
 
 **User Story 1: Mathematische Funkion eingeben (Prio 'Must')**<br>
 Eingabe akzeptiert folgende mathematische Funktionstypen:
