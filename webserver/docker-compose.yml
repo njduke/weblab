@@ -1,0 +1,8 @@
+services:
+  webserver:
+    image: njoaki/webserver:1.0
+    container_name: webserver
+    restart: always
+    network_mode: bridge
+    ports:
+      - 8080:8080
